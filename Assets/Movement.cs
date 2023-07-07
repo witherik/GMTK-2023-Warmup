@@ -31,8 +31,8 @@ public class Movement : MonoBehaviour {
 
     void RotateToVelocity()
     {
-        var vel = rigidBody.velocity;
-        vel.y = 0;
+        var velocity = rigidBody.velocity;
+        velocity.y = 0;
         // transform.localRotation = Vector3.RotateTowards()
     }
 }
