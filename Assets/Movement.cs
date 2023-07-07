@@ -13,7 +13,6 @@ public class Movement : MonoBehaviour
     {
         inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         inputVector = Vector3.ClampMagnitude(inputVector, 1);
-
     }
     void FixedUpdate()
     {
@@ -29,5 +28,12 @@ public class Movement : MonoBehaviour
         _rigidbody.velocity = moveVelocity;
         lastVel = _rigidbody.velocity;
         lastVel.y = 0;
+    }
+
+    void RotateToVelocity()
+    {
+        Vector3 vel = _rigidbody.velocity;
+        vel.y = 0;
+        // transform.localRotation = Vector3.RotateTowards()
     }
 }
